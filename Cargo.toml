@@ -1,0 +1,28 @@
+[package]
+name = "etcdobj"
+description = "A shared struct stored in etcd"
+authors = ["Colum McGaley <rust@m1.volf.co>"]
+edition = "2021"
+license = "Apache-2.0"
+version = "0.1.0-alpha1"
+keywords = ["etcd", "shared-state", "shared"]
+categories = ["concurrency"]
+homepage = "https://rust.volf.co/etcdobj"
+repository = "https://github.com/volfco/etcdobj"
+readme = "README.md"
+
+[dependencies]
+tokio = { version = "1.16", features = ["full"] }
+etcd-client = "0.8"
+
+anyhow = "1.0"
+tracing = "0.1"
+
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+uuid = { version = "0.8", features = ["serde", "v4"] }
+
+[dev-dependencies]
+tracing-subscriber = "0.2"
